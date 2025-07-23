@@ -5,8 +5,8 @@ int binarysearch(vector<int>array,int target,int start,int end){
     // int n=array.size();
     // int start=0;
     // int end=n-1;
-    int mid=start+((end-start)/2);
     while(start<=end){
+        int mid=start+((end-start)/2);
         if(target>array[mid]){
             return binarysearch(array,target,mid+1,end);
         }
