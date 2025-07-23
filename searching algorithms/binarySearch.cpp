@@ -6,7 +6,7 @@ int BinarySearch(vector<int>array,int target ){
     int start=0;
     int end=n-1;
     while(start<=end){
-        int mid=(start+end)/2;
+        int mid=start+((end-start)/2);         // int mid=(start+end)/2;  changing this formula for the optimisation
         if(target>array[mid]){
             start=mid+1;
         }
