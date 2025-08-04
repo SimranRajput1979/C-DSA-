@@ -3,11 +3,11 @@
 #include<algorithm>
 using namespace std;
 bool ispossible(vector<int>&arr,int n,int c,int minallowed){
-    int cows=1, space=arr[0];
+    int cows=1, lastPosition=arr[0];
     for(int i=1;i<n;i++){
-        if(arr[i]-space>=minallowed){
+        if(arr[i]-lastPosition>=minallowed){
             cows++;
-            space=arr[i];
+            lastPosition=arr[i];
         }
        if(cows==c){
         return true;
@@ -39,3 +39,4 @@ int main(){
     return 0;
 
 }
+
